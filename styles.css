@@ -1,0 +1,66 @@
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #fff8f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.calendar-container {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.day, .day-name {
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.day {
+    background: #fefefe;
+}
+
+.day a {
+    display: block;
+    margin: 4px 0;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #333;
+}
+
+.day-name {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.empty {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Month themes */
+.theme-september { background-color: #f8e6b5; }
+.theme-october   { background-color: #ffddb3; }
+.theme-november  { background-color: #ffe9cc; }
+.theme-december  { background-color: #d0f0ff; }
+.theme-january   { background-color: #e6f7ff; }
+.theme-february  { background-color: #ffe6eb; }
+.theme-march     { background-color: #e0ffe0; }
