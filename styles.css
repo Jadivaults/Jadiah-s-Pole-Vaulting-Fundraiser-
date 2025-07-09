@@ -1,93 +1,72 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto+Slab:wght@400;700&display=swap');
-
 body {
-    font-family: 'Oswald', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #000;
 }
 
-header, footer {
-    background-color: #222;
-    color: white;
-    padding: 15px 0;
+header {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
 }
 
-.calendar-container {
-    margin: 40px auto;
-    padding: 20px;
-    max-width: 1000px;
-    border-radius: 10px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
+main {
+  padding: 2rem 1rem;
 }
 
-.theme-september   { background-image: url('https://i.imgur.com/YZyV0XU.jpg'); }
-.theme-october     { background-image: url('https://i.imgur.com/Yk9RAvZ.jpg'); animation: floatPumpkins 15s linear infinite; }
-.theme-november    { background-image: url('https://i.imgur.com/s8S97jc.jpg'); }
-.theme-december    { background-image: url('https://i.imgur.com/lV9mUym.jpg'); animation: snow 20s linear infinite; }
-.theme-january     { background-image: url('https://i.imgur.com/hjFtdMQ.jpg'); }
-.theme-february    { background-image: url('https://i.imgur.com/Wf0vCUd.jpg'); }
-.theme-march       { background-image: url('https://i.imgur.com/kJTZCND.jpg'); }
-
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    margin-top: 20px;
+.month h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.day, .day-name {
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-.day {
-    font-size: 1em;
-}
-
-.day a {
-    display: block;
-    margin: 4px 0;
-    padding: 4px 6px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-family: 'Roboto Slab', serif;
-    color: #222;
-    text-decoration: none;
-    background-color: #f0f0f0;
-    transition: all 0.3s ease-in-out;
-}
-
-.day a:hover {
-    background-color: #4caf50;
-    color: #fff;
-    transform: scale(1.05);
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  justify-content: center;
+  max-width: 600px;
+  margin: auto;
 }
 
 .day-name {
-    font-weight: bold;
-    background-color: #444;
-    color: #fff;
+  font-weight: bold;
+  padding: 0.5rem;
 }
 
-.empty {
-    background: transparent;
-    box-shadow: none;
+.day {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 0.5rem;
+  position: relative;
 }
 
-@keyframes snow {
-  0% { background-position: 0px 0px; }
-  100% { background-position: 0px 1000px; }
+.day a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-top: 0.2rem;
+  background-color: #ddd;
+  padding: 4px;
+  border-radius: 3px;
 }
 
-@keyframes floatPumpkins {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 1000px; }
+.day.empty {
+  background-color: transparent;
+}
+
+.paid {
+  opacity: 0.5;
+}
+
+.paid::after {
+  content: "❌";
+  color: red;
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
